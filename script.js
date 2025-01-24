@@ -41,6 +41,7 @@ function tratarErro(erro){
 
 function renderizarMensagens(){
     const ul = document.querySelector(".mensagens");
+    ul.innerHTML = "";
     
     mensagens.forEach( mensagem => {
         const li = document.createElement('li');
