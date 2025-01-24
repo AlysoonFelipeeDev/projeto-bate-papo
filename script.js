@@ -51,10 +51,10 @@ function renderizarMensagens(){
                 li.innerHTML = `<span class="cor-tempo">(${mensagem.time})</span> <span class="nome-cor"><strong>${mensagem.from}</strong></span> <span class="cor-texto">${mensagem.text}</span>`
             } else if(mensagem.type === "message" || mensagem.to === "Todos"){
                 li.classList.add("normais");
-                li.innerHTML = `<span class="cor-tempo">(${mensagem.time})</span> <span class="nome-cor"><strong>${mensagem.from}</strong></span> <span class="cor-texto">para</span> <span class="nome-cor">${mensagem.to} :</span> <span class="cor-texto">${mensagem.text}</span> `
+                li.innerHTML = `<span class="cor-tempo">(${mensagem.time})</span> <span class="nome-cor"><strong>${mensagem.from}</strong></span> <span class="cor-texto">para</span> <span class="nome-cor1">${mensagem.to} :</span> <span class="cor-texto">${mensagem.text}</span> `
             } else if(mensagem.type === "private_message" && (mensagem.from === usuario || mensagem.to === usuario)){
                 li.classList.add("reservadas");
-                li.innerHTML = `<span class="cor-tempo">(${mensagem.time})</span> <span class="nome-cor"><strong>${mensagem.from}</strong></span> <span class="cor-texto">reservadamente para</span> <span class="nome-cor">${mensagem.to} :</span> <span class="cor-texto">${mensagem.text}</span>`
+                li.innerHTML = `<span class="cor-tempo">(${mensagem.time})</span> <span class="nome-cor"><strong>${mensagem.from}</strong></span> <span class="cor-texto">reservadamente para</span> <span class="nome-cor1">${mensagem.to} :</span> <span class="cor-texto">${mensagem.text}</span>`
             };
             ul.appendChild(li);
             li.scrollIntoView();
