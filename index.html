@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bate-papo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="overlay none">
+        <div class="area-escolha none">
+            <p class="p1">Escolha um contato</p>
+            <p class="p2">para enviar mensagem:</p>
+            <div class="nomes" onclick="escolherUsuario(this)">
+                <div class="ordem">
+                    <ion-icon name="people" class="ion"></ion-icon>
+                    <span class="span">Todos</span>
+                </div>
+                <span class="span1 none">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                </span>
+            </div>
+            <div class= "nomes" onclick="escolherUsuario(this)">
+                <div class="ordem">
+                    <ion-icon name="person-circle" class="ion"></ion-icon> 
+                    <span class="span">João</span>
+                </div>
+                <span class="span1 none">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                </span>
+            </div>
+            <div class= "nomes" onclick="escolherUsuario(this)">
+                <div class="ordem">
+                    <ion-icon name="person-circle" class="ion"></ion-icon> 
+                    <span class="span">Maria</span>
+                </div>
+                <span class="span1 none">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                </span>
+            </div>
+            <ul class="participantes"></ul>
+            <p class="p3">Escolha a visibilidade:</p>
+            <ul>
+                <li class="pri-pub" onclick="escolherPrivacidade(this)">
+                    <div class="ordem">
+                        <ion-icon name="lock-open" class="ion"></ion-icon>
+                        <span class="span-pri">Público</span>
+                    </div>
+                    <span class="span1 none">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    </span>
+                </li>
+                <li class="pri-pub" onclick="escolherPrivacidade(this)">
+                    <div class="ordem">
+                        <ion-icon name="lock-closed" class="ion"></ion-icon>
+                        <span class="span-pri">Reservadamente</span>
+                    </div>
+                    <span class="span1 none">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header >
+        <img src="imagens/logo-uol.png" alt="logo-uol">
+        <ion-icon name="people" class="cursor" onclick="novaArea()"></ion-icon>
+    </header>
+    <main>
+        <article class="chats">
+            <ul class="mensagens"></ul>
+            <footer>
+                <div class="area">
+                    <div class="area-mensagem">
+                        <textarea placeholder=" Escreva aqui..." class="escrever"></textarea>
+                        <ion-icon name="navigate" class="cursor" onclick="enviarMensagem()"></ion-icon>
+                    </div>
+                    <p class="remetente">Enviando para Todos (Público)</p>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
